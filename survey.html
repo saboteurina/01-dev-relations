@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Liberty Mutual developer survey">
+    <meta name="author" content="Liberty Mutual">
+    <title>Developer Survey | Liberty Mutual</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="icon" href="img/favicon.png" type="image/x-icon">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-light">
+    <a class="navbar-brand" href="https://libertymutual.com">
+        <img src="img/lm_logo.svg" width="143" height="50" alt="Liberty mutual home" loading="lazy">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+            <a class="nav-item nav-link" href="index.html">Developer Relations Home</a>
+            <a class="nav-item nav-link active" href="survey.html">Developer Survey<span class="sr-only">(current)</span></a>  
+        </div>
+    </div>
+</nav>
+<form>
+    <div class="container">
+        <h1>Developer survey</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" autofocus>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+                </div>
+                <div class="form-group">
+                    <label for="n-number">N-number</label>
+                    <input type="text" class="form-control" id="n-number" name="n-number" placeholder="e.g., n1234567">
+                </div>
+                <div class="form-group">
+                    <label for="age">Age (Optional)</label>
+                    <input type="number" class="form-control" id="age" name="age" min="18" max="100">
+                </div>
+                <div class="form-group">
+                    <label for="role">Which option best describes your current role as it relates to IT?</label>
+                    <select class="form-control" id="role" name="role" required>
+                        <option selected disabled>Select how your current role relates to IT</option>
+                        <option value="prospect">I don't work in IT but I want to</option>
+                        <option value="practitioner">I work in IT</option>
+                        <option value="manager">I am a manager of IT personnel</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                <fieldset class="form-group form-check">
+                    <legend>Would you recommend employment at Liberty Mutual to an IT professional?</legend>
+                    <input type="radio" class="form-check-input" id="definitely" name="recommend" value="definitely" checked>
+                    <label for="definitely" class="form-check-label">Definitely</label>
+                    <input type="radio" class="form-check-input" id="maybe" name="recommend" value="maybe">
+                    <label for="maybe" class="form-check-label">Maybe</label>
+                    <input type="radio" class="form-check-input" id="not-sure" name="recommend" value="not-sure">
+                    <label for="not-sure" class="form-check-label">Not sure</label>
+                </fieldset>
+                <div class="form-group">
+                    <label for="role">What current technology at Liberty Mutual do you most feel should be phased out?</label>
+                    <select class="form-control" id="hate" name="hate">
+                        <option selected disabled>Select an option</option>
+                        <option value="webforms">ASP.NET WebForms</option>
+                        <option value="java">Java</option>
+                        <option value="cobol">COBOL</option>
+                        <option value="ssis">SSIS</option>
+                    </select>
+                </div>
+                <fieldset class="form-group form-check">
+                    <legend>What technology would you like to see embraced in Liberty Mutual's IT operations? (Check all that apply)</legend>
+                    <input type="checkbox" class="form-check-input" id="react" name="love" value="react">
+                    <label for="react" class="form-check-label">React.js</label>
+                    <input type="checkbox" class="form-check-input" id="microservices" name="love" value="microservices">
+                    <label for="microservices" class="form-check-label">Microservices</label>
+                    <input type="checkbox" class="form-check-input" id="golang" name="love" value="golang">
+                    <label for="golang" class="form-check-label">Golang</label>
+                    <input type="checkbox" class="form-check-input" id="middleware" name="love" value="middleware">
+                    <label for="middleware" class="form-check-label">Custom middleware</label>
+                </fieldset>
+                <div class="form-group">
+                    <label for="comments">Any comments or suggestions? (Optional)</label>
+                    <textarea id="comments" class="form-control" name="comments" rows="3" cols="50" placeholder="Enter your comment here..."></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary form-control">Submit Survey</button>
+            </div>
+        </div>
+    </div>
+</form>
+<div class="container-fluid">
+    <footer>© 2020 Liberty Mutual Insurance, 175 Berkeley Street, Boston, MA 02116 | 36 USC 220506</footer>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
+</html>
